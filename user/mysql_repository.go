@@ -16,5 +16,5 @@ func (r MysqlRepository) FindById(id int) (User, error) {
 }
 
 func (r MysqlRepository) All() (CollectionRepository, error) {
-	return MysqlCollection{}, nil
+	return &MysqlCollection{}, nil
 }

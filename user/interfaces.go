@@ -10,8 +10,8 @@ type Repository interface {
 }
 
 type CollectionRepository interface {
-	AddActiveFilter() (CollectionRepository, error)
-	AddCreatedAtFilter(time.Time, time.Time) (CollectionRepository, error)
+	AddActiveFilter() error
+	AddCreatedAtFilter(time.Time, time.Time) error
 	Get() ([]User, error)
-	Slice(int, int) (CollectionRepository, error)
+	Slice(int, int) error
 }
